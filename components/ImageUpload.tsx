@@ -7,7 +7,6 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import { toast } from "sonner";
 
-
 const {
   env: {
     imagekit: { publicKey, urlEndpoint },
@@ -47,9 +46,9 @@ const ImageUpload = ({
   const onError = (error: any) => {
     console.log(error);
 
-    toast.error("Image upload failed",{
-      description: "Your image could not be uploaded. Please try again."
-    });
+    toast.error("Image upload failed", {
+      description: `Your image could not be uploaded. Please try again.`,
+    })
   };
 
   const onSuccess = (res: any) => {
@@ -57,10 +56,8 @@ const ImageUpload = ({
     onFileChange(res.filePath);
 
     toast.success("Image uploaded successfully",{
-      description: `${res.filePath} uploaded successfully!`
-    });
-
-
+      description: `${res.filePath} uploaded successfully!`,
+    })
   };
 
   return (

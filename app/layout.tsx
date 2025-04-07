@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import localFont from "next/font/local";
-import { ReactNode } from "react";
 import { Toaster } from "@/components/ui/sonner";
 
+import localFont from "next/font/local";
+import { ReactNode } from "react";
 
 const ibmPlexSans = localFont({
   src: [
@@ -35,10 +35,11 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
       >
         {children}
 
-        <Toaster richColors />
+        <Toaster richColors position="top-right" />
       </body>
     </html>
   );
 };
 
 export default RootLayout;
+  

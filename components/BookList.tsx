@@ -1,11 +1,11 @@
 import React from "react";
-import BookCard from "./BookCard";
+import BookCard from "@/components/BookCard";
 
-type Props = {
+interface Props {
   title: string;
   books: Book[];
-  containerClassName: string;
-};
+  containerClassName?: string;
+}
 
 const BookList = ({ title, books, containerClassName }: Props) => {
   return (
@@ -20,5 +20,4 @@ const BookList = ({ title, books, containerClassName }: Props) => {
     </section>
   );
 };
-
 export default BookList;

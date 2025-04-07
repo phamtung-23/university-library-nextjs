@@ -1,7 +1,7 @@
-import Image from "next/image";
 import React from "react";
-import { Button } from "./ui/button";
-import BookCover from "./BookCover";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import BookCover from "@/components/BookCover";
 
 const BookOverview = ({
   title,
@@ -30,17 +30,18 @@ const BookOverview = ({
           </p>
 
           <div className="flex flex-row gap-1">
-            <Image src="/icons/star.svg" alt="star" width={20} height={20} />
+            <Image src="/icons/star.svg" alt="star" width={22} height={22} />
             <p>{rating}</p>
           </div>
         </div>
 
         <div className="book-copies">
           <p>
-            Total book <span>{total_copies}</span>
+            Total Books <span>{total_copies}</span>
           </p>
+
           <p>
-            Available book <span>{available_copies}</span>
+            Available Books <span>{available_copies}</span>
           </p>
         </div>
 
@@ -60,12 +61,9 @@ const BookOverview = ({
             coverColor={color}
             coverImage={cover}
           />
-          <div className=" absolute left-16 top-10 rotate-12 opacity-40 max-sm:hidden">
-            <BookCover
-              variant="wide"
-              coverColor={color}
-              coverImage={cover}
-            />
+
+          <div className="absolute left-16 top-10 rotate-12 opacity-40 max-sm:hidden">
+            <BookCover variant="wide" coverColor={color} coverImage={cover} />
           </div>
         </div>
       </div>
